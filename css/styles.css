@@ -34,7 +34,7 @@ h1 {
   margin: 0;
   font-family: 'Amatic SC', cursive;
   font-size: 6em;
-  height: 100px;
+  height: 120px;
 }
 h2 {
   height: 10px;
@@ -102,13 +102,23 @@ ul.entries a:hover {
  
 footer {
   font-size: 0.65em;
-  text-align: left;
+  text-align: right;
+}
+
+footer a  {
+  color: #000;
+}
+footer a:visited{
+  color: #333;
 }
 
 .subtitle {
   margin: 0;
   font-family: 'Amatic SC', cursive;
   font-size: 3em;
+}
+.author {
+  margin-top: 50px;
 }
 
 img {
@@ -125,7 +135,8 @@ img.snap {
 }
 
 .polaroid {
-  padding: 10px 10px 50px 10px;
+  padding: 10px 10px 40px 10px;
   background: #F7F7F7;
   box-shadow: 0px 2px 4px #ddd;
+  text-align: center;
 }

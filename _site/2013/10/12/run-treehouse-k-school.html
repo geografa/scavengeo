@@ -9,7 +9,7 @@
 <body>
   <div id="main">
     <header>
-      <a href="/"><h1> scavengeo </h1></a><p class="subtitle"> find it. run it. </p>
+      <a href="/"><h1> scavengeo </h1></a>
     </header>
     <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
 <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
@@ -27,23 +27,26 @@ $.getJSON("/geojson/run-2013-10-12.geojson", function(data) {
         layer.bindPopup(feature.properties.name);
       }
     });
-    var map = L.mapbox.map('map','grafa.map-1zed2it9').fitBounds(geojson.getBounds());
+    var map = L.mapbox.map('map','grafa.map-1zed2it9',{
+              attributionControl:true
+      })
+    .fitBounds(geojson.getBounds());
     geojson.addTo(map);
   });
 
 </script>
 
-<h2 class="content">Treehouse K-School Run</h2>
-<p><a href="http://twitter.com/geografa">Rafa Gutierrez</a></p>
+<h2 class="subtitle">Treehouse K-School Run</h2>
+<p class="author"><a href="http://twitter.com/geografa">Rafa Gutierrez</a></p>
 <img src="/img/snaps/fernhill.jpg" align="left" class="snap polaroid"/>
 
 
 <p>A nice, low traffic run through Concordia and Vernon neighborhoods. See how many treehouses you can spot. Stop at the Kennedy school for a beer. Sprint the track at Fernhill.</p>
 
 
-<img src="http://distilleryimage0.ak.instagram.com/24712d821a7511e38c8722000a1f90f9_7.jpg" class="snap polaroid"/>
+<img src="http://distilleryimage1.ak.instagram.com/ac4ff4b68a2b11e2bd3c22000a1faf7b_7.jpg" class="snap polaroid"/>
     <footer>
-      <p> GRAFA | All Rights Reserved. </p>
+      <p><a href="http://grafa.co">GRAFA</a></p>
     </footer> 
   </div>
 </body>
