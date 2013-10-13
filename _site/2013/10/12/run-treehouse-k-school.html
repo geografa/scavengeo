@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>  Treehouse K-School Run |  scavengeo </title>
+  <link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div id="main">
+    <header>
+      <a href="/"><h1> scavengeo </h1></a><p class="subtitle"> find it. run it. </p>
+    </header>
+    <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+<link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+<!--[if lte IE 8]>
+  <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet'>
+<![endif]-->
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<div id='map' class="polaroid"></div>
+<script type='text/javascript'>
+
+$.getJSON("/geojson/run-2013-10-12.geojson", function(data) {
+    var geojson = L.geoJson(data, {
+      onEachFeature: function (feature, layer) {
+        layer.bindPopup(feature.properties.name);
+      }
+    });
+    var map = L.mapbox.map('map','grafa.map-1zed2it9').fitBounds(geojson.getBounds());
+    geojson.addTo(map);
+  });
+
+</script>
+
+<h2 class="content">Treehouse K-School Run</h2>
+<p><a href="http://twitter.com/geografa">Rafa Gutierrez</a></p>
+<img src="/img/snaps/fernhill.jpg" align="left" class="snap polaroid"/>
+
+
+<p>A nice, low traffic run through Concordia and Vernon neighborhoods. See how many treehouses you can spot. Stop at the Kennedy school for a beer. Sprint the track at Fernhill.</p>
+
+
+<img src="http://distilleryimage0.ak.instagram.com/24712d821a7511e38c8722000a1f90f9_7.jpg" class="snap polaroid"/>
+    <footer>
+      <p> GRAFA | All Rights Reserved. </p>
+    </footer> 
+  </div>
+</body>
+</html>

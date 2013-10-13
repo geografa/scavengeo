@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+<link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+<!--[if lte IE 8]>
+  <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet'>
+<![endif]-->
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+<div id='map' class="polaroid"></div>
+<script type='text/javascript'>
+
+$.getJSON("{{ page.geojson }}", function(data) {
+    var geojson = L.geoJson(data, {
+      onEachFeature: function (feature, layer) {
+        layer.bindPopup(feature.properties.name);
+      }
+    });
+    var map = L.mapbox.map('map','{{ page.map }}').fitBounds(geojson.getBounds());
+    geojson.addTo(map);
+  });
+
+</script>
+
+<h2 class="content">{{page.title}}</h2>
+<p><a href="http://twitter.com/{{ page.twitter}}">{{page.realname}}</a></p>
+<img src="{{ page.snap }}" align="left" class="snap polaroid"/>
+
+{{ content }}
+
+<img src="{{ page.instagram }}" class="snap polaroid"/>
