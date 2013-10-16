@@ -17,35 +17,36 @@
 <!--[if lte IE 8]>
   <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet'>
 <![endif]-->
-<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-
-<div id='map' class="polaroid"></div>
-<script type='text/javascript'>
-
-$.getJSON("/geojson/run-2012-11-01.geojson", function(data) {
-    var geojson = L.geoJson(data, {
-      onEachFeature: function (feature, layer) {
-        layer.bindPopup(feature.properties.name);
-      }
-    });
-    var map = L.mapbox.map('map','grafa.map-1zed2it9',{
-              attributionControl:true
-      })
-    .fitBounds(geojson.getBounds());
-    geojson.addTo(map);
-  });
-
-</script>
 
 <h2 class="subtitle">A Different Kind of Run</h2>
 <p class="author"><a href="http://twitter.com/geografa">Rafa Gutierrez</a></p>
 <img src="/img/snaps/fernhill.jpg" align="left" class="snap polaroid"/>
-
-
+<span class="content">
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec nunc at neque lacinia pharetra. Integer tempus sagittis metus, eu volutpat justo cursus nec. Fusce ultrices orci sed ante vehicula et commodo dolor ultricies. In tincidunt volutpat sem dictum luctus. Maecenas magna eros, iaculis nec malesuada lobortis, condimentum a erat. Quisque ultricies facilisis augue ut adipiscing. Phasellus bibendum justo laoreet quam condimentum non imperdiet enim sagittis. Duis aliquam euismod semper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer ac nisl quis est consectetur volutpat. Phasellus orci sem, porttitor eu ultrices nec, aliquam eu odio. Nam ornare, metus a semper fringilla, sem elit venenatis lacus, sed fringilla arcu purus non arcu. Ut tempus lacus id nunc posuere feugiat. Vivamus ac nibh ipsum, vestibulum egestas risus.</p>
-
-
-<img src="http://distilleryimage9.ak.instagram.com/25db5c741a7511e3912622000a9f307a_7.jpg" class="snap polaroid"/>
+</span>
+<div id='map' class="polaroid"></div>
+<script type='text/javascript'>
+var map = L.mapbox.map('map','grafa.map-1zed2it9')
+    .setView([45.557, -122.667], 6);
+// load the marker
+var polylineLayer = L.mapbox.markerLayer()
+    .loadURL('/geojson/run-2012-11-01.geojson')
+    .addTo(map);
+// function to run once marker has loaded
+polylineLayer.on('ready', function(){  
+    polylineLayer.eachLayer(function(layer){
+      map.fitBounds(polylineLayer.getBounds());
+      if (parseInt(layer.feature.properties.time) < 30) {
+        layer.setStyle( {color: 'green', dashArray:'10,10,10,10,10,10,10,10,10,10'});
+        polylineLayer.bindPopup(layer.feature.properties.time);
+      }
+      else {
+        layer.setStyle( { color: 'red'} );
+      }
+    });
+});
+</script>
+<img src="http://distilleryimage9.ak.instagram.com/25db5c741a7511e3912622000a9f307a_7.jpg" class="polaroid"/>
     <footer>
       <p><a href="http://grafa.co">GRAFA</a></p>
     </footer> 
