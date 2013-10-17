@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "name": "Downtown Ride",
-        "time": null
+        "time": ""
       },
       "geometry": {
         "type": "LineString",
@@ -5773,7 +5773,7 @@
       "type": "Feature",
       "properties": {
         "name": "Other Ride",
-        "time": 32
+        "time": 25
       },
       "geometry": {
         "type": "LineString",
