@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<script src='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+<link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+
+<!--[if lte IE 8]>
+  <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet'>
+<![endif]-->
+
+<h2 class="subtitle">{{page.title}}</h2>
+<p class="author"><a href="http://twitter.com/{{ page.twitter}}">{{page.realname}}</a></p>
+<img src="{{ page.snap }}" align="left" class="snap polaroid"/>
+<span class="content">{{ content }}</span>
+<div id='map' class="polaroid"></div>
+<script type='text/javascript'>
+var map = L.mapbox.map('map', 'grafa.map-1zed2it9');
+
+var markerLayer = L.mapbox.markerLayer()
+    .loadURL('{{ page.geojson }}')
+    .addTo(map);
+    
+// function to run once marker has loaded
+markerLayer.on('ready', function(){  
+    markerLayer.eachLayer(function(layer){
+      var myIcon = L.icon({
+        iconUrl: '/img/tree.png',
+        iconSize: [40, 40]
+    });
+      map.fitBounds(markerLayer.getBounds());
+      if (layer.feature.properties.name) {
+        layer.bindPopup(
+          '<h4>' + layer.feature.properties.name + '</h4>'
+          );
+        layer.setIcon(myIcon);
+      }
+      else {
+        markerLayer.bindPopup('No Info :(');
+      }
+    });
+});
+</script>
+<img src="{{ page.instagram }}" class="polaroid"/>
