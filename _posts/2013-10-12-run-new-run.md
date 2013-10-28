@@ -6,6 +6,7 @@ twitter: geografa
 realname: Rafa Gutierrez
 instagram: http://distilleryimage9.ak.instagram.com/25db5c741a7511e3912622000a9f307a_7.jpg
 snap: /img/snaps/fernhill.jpg
+snap_caption: This is a caption.
 map: grafa.map-1zed2it9
 geojson: /geojson/run-2012-11-01.geojson
 ---

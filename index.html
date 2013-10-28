@@ -1,8 +1,15 @@
 ---
 layout: default
-banner: http://distilleryimage0.ak.instagram.com/24712d821a7511e38c8722000a1f90f9_7.jpg
+title: Maps
 ---
-<section role="banner" class="polaroid">
-  <a href="/maps"><img src={{page.banner}} /></a>
-  <p class="subtitle"> find it. follow it. </p>
-</section>
+<p class="subtitle">map notes</p>
+<ul class="entries">
+  {% for post in site.posts %} 
+  <li>
+    <a href="{{ post.url }}">
+      <img src="{{ post.instagram }}" />
+      <h3>{{ post.title }}</h3>
+    </a>  
+  </li>
+  {% endfor %}
+</ul>
