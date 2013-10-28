@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset=utf-8 />
-  <title>  Treehouse K-School Run |  scavengeo </title>
+  <title>  old stomping ground |  scavengeo </title>
   <script src='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
   <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
   <!--[if lte IE 8]>
@@ -28,9 +28,9 @@ $(document).ready(function(){
 </script>
 
 <div class="polaroid">
-  <img src="http://distilleryimage7.ak.instagram.com/ba1961e06d8411e29e3522000a9f18ab_7.jpg" />
-  <span id="overlay"class="content"><h2 class="subtitle">Treehouse K-School Run</h2>
-<p>A nice, low traffic run through Concordia and Vernon neighborhoods. See how many treehouses you can spot. Stop at the Kennedy school for a beer. Sprint the track at Fernhill.</p>
+  <img src="http://distilleryimage9.ak.instagram.com/42e63454626711e285b022000a9f15de_7.jpg" />
+  <span id="overlay"class="content"><h2 class="subtitle">old stomping ground</h2>
+<p>This is a run route in my old hood. I like the idea of maximizing my feet on soft ground so I make it a point to loop around parks as much as possible. Woodlawn Park is a small park nestled in the North Portland neighborhood of Woodlawn. It’s always eerily quiet there. Peninsula, on the other hand, is always busy but it has just about every amenity a park can have. Circling the Rose Garden is a real treat and worth the stop.</p>
 <p class="author">- <a href="http://twitter.com/geografa">rafa</a></p></span>
 
   <div class="icons">
@@ -44,7 +44,7 @@ var map = L.mapbox.map('map','grafa.map-1zed2it9')
     .setView([0,0],2);
 // load the marker
 var polylineLayer = L.mapbox.markerLayer()
-    .loadURL('/geojson/run-2013-10-12.geojson')
+    .loadURL('/geojson/run-2012-11-01.geojson')
     .addTo(map);
 // function to run once marker has loaded
 polylineLayer.on('ready', function(){  

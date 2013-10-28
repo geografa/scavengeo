@@ -21,7 +21,7 @@ $(document).ready(function(){
 <div id='map' class="polaroid"></div>
 <script type='text/javascript'>
 var map = L.mapbox.map('map','{{ page.map }}')
-    .setView([45.557, -122.667], 6);
+    .setView([0,0],2);
 // load the marker
 var polylineLayer = L.mapbox.markerLayer()
     .loadURL('{{ page.geojson }}')
