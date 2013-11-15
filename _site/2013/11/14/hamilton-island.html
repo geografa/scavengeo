@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset=utf-8 />
-  <title>  government cove |  scavengeo </title>
+  <title>  hamilton island |  scavengeo </title>
   <script src='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
   <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
   <!--[if lte IE 8]>
@@ -28,9 +28,9 @@ $(document).ready(function(){
 </script>
 
 <div class="polaroid">
-  <img src="http://distilleryimage6.ak.instagram.com/9a00aac6cbfd11e2b30422000aaa0585_7.jpg" />
-  <span id="overlay"class="content"><h2 class="subtitle">government cove</h2>
-<p>This amazing little gem is one of my favorite places in the Columbia River Gorge. I think it’s part of Cascade Locks property but it’s unlcear. No signs, just a gate and a rough parking lot. The peninsula looks like a one time big hunk of rock that’s been quarried extensively. It’s a small place so easy enough to hike around in an hour. The cliffs are stunning with the Gorge as the backdrop. I hope to map this out for an orienteering sprint map one day. Below are my tracks along the trails and vistas.</p>
+  <img src="/img/snaps/hamilton-meet.png" />
+  <span id="overlay"class="content"><h2 class="subtitle">hamilton island</h2>
+<p>I can’t go a mile without gawking out the window wondering what beautiful runs lie along the majestic Columbia River. One area in particular, panned out to be fun little map I made for the Columbia River Orienteering Club (CROC) - Hamilton Island. It sits just below the Bonneville Dam, a remnant of the spoils of progress but now a refuge for wildlife and nature lovers. This Saturday, I’m headed out for CROC’s <a href="http://croc.org/content/hamilton-island-1">last race of the year</a>. If you can make it out, I would highly suggest it because not only is it a fun run, it’s FREE.</p>
 <p class="author">- <a href="http://twitter.com/geografa">rafa</a></p></span>
 
   <div class="icons">
@@ -44,7 +44,7 @@ var map = L.mapbox.map('map','grafa.map-1zed2it9')
     .setView([0,0],2);
 // load the marker
 var polylineLayer = L.mapbox.markerLayer()
-    .loadURL('/geojson/hike-herman-creek-2013-10-27.geojson')
+    .loadURL('/geojson/hamilton-2013-11-15.geojson')
     .addTo(map);
 // function to run once marker has loaded
 polylineLayer.on('ready', function(){  
