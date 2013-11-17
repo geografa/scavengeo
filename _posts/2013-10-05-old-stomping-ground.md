@@ -1,5 +1,5 @@
 ---
-layout: map_entry
+layout: map-entry
 title: old stomping ground
 date: Oct 13, 2013
 twitter: geografa

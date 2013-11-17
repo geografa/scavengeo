@@ -1,19 +1,11 @@
 ---
 layout: default-maps
 ---
-<script>
-$(document).ready(function(){
-  $(".fa-camera-retro").click(function(){
-    $("#overlay").toggle();
-  });
-});
-</script>
-
 <div class="polaroid">
   <img src="{{ page.instagram }}" />
 </div>
 <div>
-  <span id="overlay"class="content"><h2 class="subtitle">{{page.title}}</h2>{{ content }}<p class="author">- <a href="http://twitter.com/{{ page.twitter}}">{{page.realname}}</a></p></span>
+  <span><h2 class="subtitle">{{page.title}}</h2>{{ content }}<p class="author">- <a href="http://twitter.com/{{ page.twitter}}">{{page.realname}}</a></p></span>
 </div>
 <div id='map' class="polaroid"></div>
 <script type='text/javascript'>

@@ -1,5 +1,5 @@
 ---
-layout: map_entry
+layout: map-entry
 title: Treehouse K-School Run
 date: Oct 12, 2013
 twitter: geografa

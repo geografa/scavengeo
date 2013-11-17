@@ -1,5 +1,5 @@
 ---
-layout: map_entry
+layout: map-entry
 title: government cove
 date: Oct 27, 2013
 twitter: geografa
