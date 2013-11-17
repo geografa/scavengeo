@@ -1,5 +1,5 @@
 ---
-layout: map_entry
+layout: map-entry
 title: Day One - Null Island
 date: Oct 1, 2013
 twitter: geografa
