@@ -18,7 +18,10 @@ Weather was what you'd expect mid-November - cold, sideways rain, wind that cut 
 I started the map about 4 years ago after I couldn't stand the temptation of knowing what was on that island. It turned out it was fairly well used by fishers and hikers just out for stroll. When I figured it was public land and I got the AOK from ACOE, I grabbed some [LiDAR](http://www.opentopography.org/), some NAIP imagery and went to town on [OCAD](http://ocad.com/en/). A few visits later, I had decent map that's holding up to this day.
 
 ### The Digital Map
-I recorded my tracks using [Strava](http://www.strava.com/), my GPS app du jour. I exported the route to GPX, loaded it into [geojson.io](http://geojson.io/#map=2/20.0/0.0) and grabbed the GeoJSON for use with the [MapBox.js API](https://www.mapbox.com/mapbox.js/api/v1.4.2/). The paper map was scanned and georeferenced in [QGIS](http://qgis.org). Tiles were finally made from the georeferenced map in [TileMill](http://www.mapbox.com/tilemill/) and uploaded to MapBox. The pace of the moving marker is not my actual pace. But because I have my splits, I may play with breaking up the track into segments and then timing each accordingly.
+I recorded my tracks using [Strava](http://www.strava.com/), my GPS app du jour. I exported the route to GPX, loaded it into [geojson.io](http://geojson.io/#map=2/20.0/0.0) and grabbed the GeoJSON for use with the [MapBox.js API](https://www.mapbox.com/mapbox.js/api/v1.4.2/). 
+
+![Hamilton Island Map](/img/snaps/hamilton-georef.png)
+The paper map was scanned and georeferenced in [QGIS](http://qgis.org). Tiles were finally made from the georeferenced map in [TileMill](http://www.mapbox.com/tilemill/) and uploaded to MapBox. The pace of the moving marker is not my actual pace. But because I have my splits, I may play with breaking up the track into segments and then timing each accordingly.
 
 ### The Run
 ![Hamilton Island Map](/img/snaps/hamilton-check.jpg)
