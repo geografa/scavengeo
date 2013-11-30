@@ -9,5 +9,8 @@ layout: default-maps
 </div>
 <div id='map' class="polaroid"></div>
 <script type='text/javascript'>
-var map = L.mapbox.map('map','{{ page.map }}');
+var map = L.mapbox.map('map','{{ page.map }}', {
+  minZoom: {{ page.minZoom }}
+})
+    .setView([{{ page.lat }}, {{ page.lng }}], {{ page.zoomLevel }});
 </script>
