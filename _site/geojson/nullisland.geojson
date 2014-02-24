@@ -4,7 +4,10 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Null Island"
+        "name": "Null Island",
+        "size": "small",
+        "color": "red",
+        "desc": "nowhere"
       },
       "geometry": {
         "type": "Point",
